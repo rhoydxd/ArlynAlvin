@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+/* https://colorhunt.co/palette/f7fbfcd6e6f2b9d7ea769fcd */
+:root {
+  --primary-color: #57788b;
+  --secondary-color: #f7fbfc;
+  --background-color: #b9d7ea;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poiret One", sans-serif;
+  font-weight: bold;
+  /* background: url("../resources/images/") no-repeat center center fixed;
+  background-size: cover; */
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 90%; /* Flexible width for small screens */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* INDEX.HTML */
+
+.welcome__container {
+  height: 100vh;
+  background: url("../resources/images/welcomephoto.png") no-repeat center
+    center fixed;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome__container::before {
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.welcome__card {
+  padding-top: 100px;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.welcome__photo {
+  width: 200px;
+}
+
+input[type="text"] {
+  color: white;
+  border: none;
+  border-bottom: 1px var(--secondary-color) solid;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 20px;
+  font-family: "Poiret One", sans-serif;
+  font-weight: bold;
+  display: list-item;
+  margin-bottom: 20px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: white;
+}
+
+input[type="button"] {
+  width: 100%;
+  font-family: "Poiret One", sans-serif;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 5px;
+  border: none;
+  border-radius: 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
