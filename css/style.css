@@ -117,4 +117,8 @@ input[type="button"]:hover {
   .welcome__photo {
     width: 200px;
   }
+
+  .welcome__card {
+    padding-top: 25px;
+  }
 }
