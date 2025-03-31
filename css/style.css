@@ -18,7 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
   /* background: url("../resources/images/") no-repeat center center fixed;
   background-size: cover; */
@@ -113,12 +113,73 @@ input[type="button"]:hover {
   overflow: hidden;
 }
 
+/* HOME.HTML */
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background: url("../resources/images/homebackground.jpg") center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* navigation desktop*/
+
+.navigation__flex-desktop {
+  margin-left: 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navigation__wedding-logo img {
+  width: 100px;
+}
+
+.navigation__desktop-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.navigation__desktop-social-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation__desktop-menu-items li {
+  font-size: 18px;
+  color: rgb(5, 28, 44);
+}
+
+.navigation__desktop-menu-items a {
+  font-size: 18px;
+  color: rgb(5, 28, 44);
+}
+
+.navigation__desktop-social-items i {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* MEDIA QUERY */
 @media (max-width: 768px) {
+  /* INDEX.HTML */
   .welcome__photo {
     width: 200px;
   }
 
   .welcome__card {
     padding-top: 25px;
+  }
+
+  /* HOME.HTML */
+
+  .hero {
+    background: url("../resources/images/homebackgroundmobile.png") center
+      center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
