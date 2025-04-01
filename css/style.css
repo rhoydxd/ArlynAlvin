@@ -153,7 +153,8 @@ input[type="button"]:hover {
   color: rgb(5, 28, 44);
 }
 
-.navigation__desktop-menu-items a {
+.navigation__desktop-menu-items a,
+.navigation__mobile-menu-items a {
   font-size: 18px;
   color: rgb(5, 28, 44);
 }
@@ -164,11 +165,25 @@ input[type="button"]:hover {
 }
 
 /* navigation mobile */
+
 .navigation__mobile-flex {
-  margin-right: 20px;
+  position: sticky;
+  top: 0;
+  padding-right: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.6s ease-in-out;
+}
+
+.navigation__mobile-flex.active {
+  background-color: rgba(87, 120, 139, 0.3);
+}
+
+.navigation__mobile-wedding-logo a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .navigation__mobile-wedding-logo img {
   width: 60px;
@@ -176,6 +191,34 @@ input[type="button"]:hover {
 
 .navigation__mobile-toggle-menu i {
   font-size: 35px;
+  cursor: pointer;
+}
+
+.navigation__mobile-menu-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(87, 120, 139, 0.3);
+  padding: 20px 0px;
+  transform: translateY(-200%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navigation__mobile-menu-items-container.active {
+  top: 0;
+  transform: translateY(0%);
+}
+
+.navigation__mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* MEDIA QUERY */
@@ -205,8 +248,8 @@ input[type="button"]:hover {
 
 @media (min-width: 768px) {
   /* HOME.HTML */
-
-  .navigation__mobile-flex {
+  .navigation__mobile-flex,
+  .navigation__mobile-menu-items-container {
     display: none;
   }
 }
