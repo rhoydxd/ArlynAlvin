@@ -8,7 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const headerMenuSocialItems = document.querySelector(
     ".navigation__desktop-social-items"
   );
+  const mobileToggle = document.querySelector(".navigation__mobile-toggle");
+  const mobileNavContainer = document.querySelector(
+    ".navigation__mobile-container"
+  );
+  const navbar = document.querySelector(".navigation__flex");
 
+  // NAVIGATION LEFT TO TOP FEATURE
   function toggleNavbarLeftTop() {
     if (window.scrollY > 0) {
       header.classList.remove("left-active");
@@ -24,6 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
       headerMenuSocialItems.classList.add("left-active");
     }
   }
-
   window.addEventListener("scroll", toggleNavbarLeftTop);
+
+  //MOBILE NAV TOGGLE
+  mobileToggle.addEventListener("click", function () {
+    mobileNavContainer.classList.toggle("active");
+    navbar.classList.toggle("active");
+  });
 });
