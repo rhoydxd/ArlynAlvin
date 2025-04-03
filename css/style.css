@@ -96,7 +96,7 @@ input[type="button"] {
   width: 100%;
   font-family: "Poiret One", sans-serif;
   color: white;
-  background-color: var(--primary-color);
+  background-color: #57788b9d;
   padding: 5px;
   border: none;
   border-radius: 25px;
@@ -207,13 +207,14 @@ input[type="button"]:hover {
 }
 
 /* hero */
+.home__body {
+  background: url("../resources/images/homebackground.jpg") no-repeat center
+    center fixed;
+  background-size: cover;
+}
 .hero {
   width: 100vw;
   height: 100vh;
-  background: url("../resources/images/homebackground.jpg") no-repeat center
-    center;
-  background-size: cover;
-  display: flex;
 }
 
 .hero__info-container {
@@ -223,12 +224,12 @@ input[type="button"]:hover {
 
 .hero__container h1 {
   text-align: center;
-  font-family: "Stella Wilson", sans-serif;
+  font-family: "Alex Brush", sans-serif;
   margin-top: 150px;
-  font-size: 200px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 0.6;
+  font-size: 180px;
+
+  font-weight: 550;
+  line-height: 1;
 }
 
 .hero__containerr {
@@ -271,5 +272,12 @@ input[type="button"]:hover {
   }
   .navigation__logo {
     width: 60px !important;
+  }
+
+  .home__body {
+    height: 100vh;
+    background: url("../resources/images/homebackgroundmobile.png") no-repeat
+      center fixed;
+    background-size: cover;
   }
 }
