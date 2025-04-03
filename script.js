@@ -22,12 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
       headerMenu.classList.remove("left-active");
       headerMenuItems.classList.remove("left-active");
       headerMenuSocialItems.classList.remove("left-active");
+      header.classList.add("background-active");
     } else {
       header.classList.add("left-active");
       headerLogo.classList.add("left-active");
       headerMenu.classList.add("left-active");
       headerMenuItems.classList.add("left-active");
       headerMenuSocialItems.classList.add("left-active");
+      header.classList.remove("background-active");
     }
   }
   window.addEventListener("scroll", toggleNavbarLeftTop);
@@ -43,3 +45,27 @@ window.onload = function () {
   document.body.style.visibility = "visible"; // Show content after everything loads
 };
 document.body.style.visibility = "hidden"; // Hide content until page loads
+
+// DATE & TIME REMAINING FUNTION
+function updateCountdown() {
+  const now = new Date();
+  const year = now.getFullYear();
+  let targetDate = new Date(year, 4, 5, 0, 0, 0); // May 5 at midnight
+
+  const timeDiff = targetDate - now;
+
+  const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+  document.getElementById(
+    "countdown"
+  ).textContent = `${days} days : ${hours} hours : ${minutes} minutes : ${seconds} seconds`;
+}
+
+// Update countdown every second
+setInterval(updateCountdown, 1000);
+updateCountdown(); // Initial call to avoid delay

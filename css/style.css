@@ -19,7 +19,9 @@ html {
 }
 body {
   font-family: "Josefin Sans", sans-serif;
-  font-weight: bold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
   /* background: url("../resources/images/") no-repeat center center fixed;
   background-size: cover; */
 }
@@ -34,6 +36,7 @@ li {
 
 .container {
   width: 90%; /* Flexible width for small screens */
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -157,10 +160,13 @@ input[type="button"]:hover {
   align-items: center;
   padding: 0 20px;
   transition: justify-content 1s ease-in-out;
-  transition: background-color 0.6s ease-in-out;
 }
 
 .navigation__flex.active {
+  background-color: rgba(185, 215, 234, 0.7) !important;
+}
+
+.navigation__flex.background-active {
   background-color: rgba(185, 215, 234, 0.7);
 }
 .navigation__flex.left-active {
@@ -233,10 +239,32 @@ input[type="button"]:hover {
 .hero__container h1 {
   text-align: center;
   font-family: "Alex Brush", sans-serif;
-  margin-top: 150px;
-  font-size: 180px;
+  margin-top: 50px;
+  font-size: 150px;
   font-weight: 550;
   line-height: 1;
+}
+
+.hero__info-container p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.hero__info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__info-date {
+  border-bottom: 2px solid white;
+}
+
+.hero__info-container p:nth-of-type(2) {
+  margin-top: 30px;
 }
 
 .hero__containerr {
@@ -305,6 +333,8 @@ input[type="button"]:hover {
     align-items: center !important;
     height: 60px !important;
     width: 100vw !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    transition: background-color 0.6s ease-in-out;
   }
   .navigation__logo {
     width: 60px !important;
@@ -312,10 +342,9 @@ input[type="button"]:hover {
 
   .home__body {
     background: url("../resources/images/homebackgroundmobile.png") no-repeat
-      center center;
+      center center fixed;
     background-size: cover;
-    background-attachment: fixed;
-    max-height: 100vh;
+    height: 100vh;
   }
 
   .hero__container h1 {
