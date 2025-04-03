@@ -312,8 +312,10 @@ input[type="button"]:hover {
 
   .home__body {
     background: url("../resources/images/homebackgroundmobile.png") no-repeat
-      center center fixed;
+      center center;
     background-size: cover;
+    background-attachment: fixed;
+    max-height: 100vh;
   }
 
   .hero__container h1 {
