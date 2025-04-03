@@ -38,3 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
     navbar.classList.toggle("active");
   });
 });
+
+window.onload = function () {
+  document.body.style.visibility = "visible"; // Show content after everything loads
+};
+document.body.style.visibility = "hidden"; // Hide content until page loads
