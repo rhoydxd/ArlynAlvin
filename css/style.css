@@ -203,7 +203,7 @@ input[type="button"]:hover {
 
 /* mobile nav */
 .navigation__mobile-toggle i {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 /* hero */
@@ -269,15 +269,22 @@ input[type="button"]:hover {
     justify-content: space-between !important;
     align-items: center !important;
     height: 60px !important;
+    width: 100vw !important;
   }
   .navigation__logo {
     width: 60px !important;
   }
 
   .home__body {
-    height: 100vh;
     background: url("../resources/images/homebackgroundmobile.png") no-repeat
       center fixed;
     background-size: cover;
+  }
+}
+
+@media (min-width: 768px) {
+  /* INDEX.HTML */
+  .navigation__mobile-toggle {
+    display: none;
   }
 }
