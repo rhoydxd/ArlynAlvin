@@ -72,7 +72,7 @@
       </div>
     </nav>
     <main>
-      <div class="hero">
+      <section class="hero">
         <div class="hero__container container">
           <div class="hero__info-container">
             <h1>Arlyn<br />&<br />Alvin</h1>
@@ -80,8 +80,34 @@
             <p><span id="countdown">Loading...</span></p>
           </div>
         </div>
-      </div>
-      <div class="hero__containerr"></div>
+      </section>
+
+      <section class="modal" id="videoModal">
+        <div class="modal__content">
+          <span class="modal__close-button">&times;</span>
+          <iframe
+            src=""
+            frameborder="0"
+            id="videoPlayer"
+            width="560"
+            height="315"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <section class="video-preview">
+        <div class="video-preview__container">
+          <div class="video-preview__video-wrapper">
+            <img src="./resources/images/videopreview.jpg" alt="" />
+            <button class="video-preview__video-button">
+              <span class="video-preview__video-play-button">
+                <span></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="./script.js"></script>
   </body>

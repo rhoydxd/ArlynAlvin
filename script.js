@@ -14,6 +14,31 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   const navbar = document.querySelector(".navigation__flex");
 
+  const modal = document.querySelector("#videoModal");
+  const videoButton = document.querySelector(
+    ".video-preview__video-play-button"
+  );
+  const closeButton = document.querySelector(".modal__close-button");
+  const videoPlayer = document.getElementById("videoPlayer");
+
+  // VIDEO MODAL
+  videoButton.addEventListener("click", function () {
+    modal.style.display = "block";
+    videoPlayer.src = "https://www.youtube.com/embed/uGNJ5fVZESY";
+  });
+
+  closeButton.addEventListener("click", function () {
+    modal.style.display = "none";
+    videoPlayer.src = "";
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      videoPlayer.src = "";
+    }
+  });
+
   // NAVIGATION LEFT TO TOP FEATURE
   function toggleNavbarLeftTop() {
     if (window.scrollY > 0) {
