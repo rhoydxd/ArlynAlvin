@@ -228,7 +228,7 @@ input[type="button"]:hover {
 }
 .hero {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 .hero__info-container {
@@ -243,6 +243,10 @@ input[type="button"]:hover {
   font-size: 150px;
   font-weight: 550;
   line-height: 1;
+}
+
+.hero__container h1 span {
+  font-size: 100px;
 }
 
 .hero__info-container p {
@@ -264,7 +268,7 @@ input[type="button"]:hover {
 }
 
 .hero__info-container p:nth-of-type(2) {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .hero__containerr {
@@ -300,6 +304,49 @@ input[type="button"]:hover {
   font-size: 18px;
 }
 
+/* Wedding and Reception venue */
+.wedding-info {
+  margin: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wedding-info__flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wedding-info__flex--1 {
+  text-align: center;
+  align-items: center;
+  border-right: 3px solid black;
+  width: 500px;
+}
+.wedding-info__flex--2 {
+  text-align: center;
+  align-items: center;
+  width: 500px;
+}
+
+.wedding-info__flex--1 h2,
+.wedding-info__flex--2 h2 {
+  font-family: "stella wilson", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 60px;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+.wedding-info__flex--1 p,
+.wedding-info__flex--2 p {
+  font-weight: 400;
+  font-size: 25px;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
 /* Video Preview */
 .video-preview {
   height: 50vh;
@@ -320,8 +367,6 @@ input[type="button"]:hover {
 }
 
 .video-preview__video-play-button {
-  /* border: none;
-  background-color: #00c9db00; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -473,6 +518,10 @@ input[type="button"]:hover {
     font-size: 100px;
   }
 
+  .hero__container h1 span {
+    font-size: 75px;
+  }
+
   .hero__info-container p {
     font-family: "Josefin Sans", sans-serif;
     font-size: 16px;
@@ -485,6 +534,19 @@ input[type="button"]:hover {
 
   .video-preview__video-wrapper {
     width: 95%;
+  }
+
+  .wedding-info__flex--1 h2,
+  .wedding-info__flex--2 h2 {
+    font-size: 40px;
+  }
+  .wedding-info__flex--1 p,
+  .wedding-info__flex--2 p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+      1px 1px 0 black;
   }
 }
 
