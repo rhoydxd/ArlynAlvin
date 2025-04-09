@@ -548,6 +548,23 @@ input[type="button"]:hover {
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
       1px 1px 0 black;
   }
+
+  .wedding-info__flex--1 {
+    border-right: none;
+  }
+
+  .wedding-info__flex--1 {
+    padding-bottom: 25px;
+  }
+
+  .wedding-info__flex {
+    flex-direction: column;
+  }
+
+  .wedding-info__flex--1,
+  .wedding-info__flex--2 {
+    width: 90%;
+  }
 }
 
 @media (min-width: 768px) {
