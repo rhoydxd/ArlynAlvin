@@ -22,6 +22,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
   </head>
   <body class="home__body">
     <nav class="navigation">
@@ -125,6 +129,27 @@
         </div>
       </section>
 
+      <section class="entourage">
+        <div class="entourage__container container">
+          <div class="entourage__flex">
+            <a
+              href="./resources/images/entourage1.png"
+              class="glightbox entourage__img img-1"
+              data-gallery="gallery1"
+            >
+              <img src="./resources/images/entourage1.png" alt="" />
+            </a>
+            <a
+              href="./resources/images/entourage1.png"
+              class="glightbox entourage__img img-2"
+              data-gallery="gallery1"
+            >
+              <img src="./resources/images/entourage1.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="dress-code">
         <div class="dress-code__container container">
           <h2>Dress Code</h2>
@@ -154,5 +179,9 @@
       </section>
     </main>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script type="text/javascript">
+      const lightbox = GLightbox();
+    </script>
   </body>
 </html>

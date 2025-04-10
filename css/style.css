@@ -539,6 +539,20 @@ input[type="button"]:hover {
   background-color: #c0c0c0;
 }
 
+/* Entourage */
+.entourage__containerP {
+  max-width: 100%;
+}
+.entourage__flex {
+  display: flex;
+}
+.entourage__img {
+  flex: 1;
+}
+
+.entourage__img img {
+  width: 100%;
+}
 @keyframes pulse-border {
   0% {
     transform: translateX(-50%) translateY(-50%) scale(1);
@@ -729,9 +743,18 @@ input[type="button"]:hover {
   .dress-code__color-container {
     gap: 5px;
   }
+
+  .dress-code__container h3 {
+    font-size: 20px;
+  }
   .dress-code_color {
     height: 50px;
     width: 50px;
+  }
+
+  /* Entourage */
+  .entourage__flex {
+    flex-direction: column;
   }
 }
 
