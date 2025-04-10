@@ -7,6 +7,13 @@
   line-height: 1.6;
 }
 
+.devider {
+  margin: 0 auto;
+  width: 150px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
 /* https://colorhunt.co/palette/f7fbfcd6e6f2b9d7ea769fcd */
 :root {
   --primary-color: #57788b;
@@ -440,13 +447,12 @@ input[type="button"]:hover {
   text-align: center;
 }
 .dress-code__container h2 {
-  font-family: "stella wilson", sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 65px;
+  padding-top: 60px;
+  text-align: center;
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
+  font-size: 40px;
 }
 .dress-code__photo-info-flex {
   display: flex;
@@ -535,8 +541,17 @@ input[type="button"]:hover {
 }
 
 /* Entourage */
+.entourage__container h2 {
+  padding-top: 60px;
+  text-align: center;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+  font-size: 40px;
+}
 .entourage__container {
   max-width: 100%;
+  /* text-align: center; */
 }
 .entourage__flex {
   display: flex;
@@ -545,10 +560,6 @@ input[type="button"]:hover {
   flex: 1;
 }
 .img-1 {
-  align-self: end;
-  align-content: end;
-  align-items: end;
-  justify-self: end;
   text-align: right;
 }
 
@@ -722,7 +733,7 @@ input[type="button"]:hover {
   }
 
   .dress-code__container h2 {
-    font-size: 45px !important;
+    font-size: 30px !important;
   }
 
   .dress-code__info-wrapper h3 {
@@ -762,6 +773,13 @@ input[type="button"]:hover {
   }
   .entourage__img img {
     max-height: 350px;
+  }
+  .img-1 {
+    text-align: start;
+  }
+
+  .entourage__container h2 {
+    font-size: 30px;
   }
 }
 
