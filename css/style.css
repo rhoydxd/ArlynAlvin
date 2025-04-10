@@ -349,7 +349,6 @@ input[type="button"]:hover {
 
 /* Video Preview */
 .video-preview {
-  height: 50vh;
   width: 100vw;
 }
 
@@ -422,6 +421,108 @@ input[type="button"]:hover {
   border-radius: 50%;
   transform: translateX(-50%) translateY(-50%);
   animation: pulse-border 1500ms ease-out infinite;
+}
+
+/* Dress code info */
+.dress-code {
+  margin: 0 auto;
+}
+
+.dress-code__container {
+  text-align: center;
+}
+.dress-code__container h2 {
+  font-family: "stella wilson", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 65px;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+.dress-code__photo-info-flex {
+  display: flex;
+  gap: 2rem;
+}
+.dress-code__image-wrapper img {
+  width: 250px;
+}
+.dress-code__image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: end;
+  flex: 1;
+}
+.dress-code__info-wrapper {
+  text-align: start;
+  flex: 1;
+}
+
+.dress-code__info-wrapper h3 {
+  line-height: 0.8;
+  font-family: "stella wilson", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 45px !important;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.dress-code__info-wrapper p:first-of-type {
+  margin-bottom: 1rem;
+}
+.dress-code__info-wrapper h4:nth-of-type(2) {
+  margin-bottom: 3rem;
+}
+.dress-code__info-wrapper h4,
+.dress-code__info-wrapper p {
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+.dress-code__container h3 {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 25px;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+.dress-code__color-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.dress-code_color {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+
+.color1 {
+  background-color: #000080;
+}
+
+.color2 {
+  background-color: #2c3a74;
+}
+
+.color3 {
+  background-color: #56678b;
+}
+.color4 {
+  background-color: #8a9db1;
+}
+.color5 {
+  background-color: #bfc5cc;
+}
+.color6 {
+  background-color: #c0c0c0;
 }
 
 @keyframes pulse-border {
@@ -542,12 +643,12 @@ input[type="button"]:hover {
   } */
   .wedding-info__flex--1 h2,
   .wedding-info__flex--2 h2 {
-    font-size: 40px;
+    font-size: 45px;
   }
   .wedding-info__flex--1 p,
   .wedding-info__flex--2 p {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
       1px 1px 0 black;
@@ -575,6 +676,45 @@ input[type="button"]:hover {
 
   .video-preview__video-play-button {
     z-index: 1000;
+  }
+
+  .dress-code__photo-info-flex {
+    gap: 5px;
+  }
+
+  .dress-code__image-wrapper img {
+    width: 170px;
+  }
+
+  .dress-code__container h2 {
+    font-size: 45px !important;
+  }
+
+  .dress-code__info-wrapper h3 {
+    font-size: 35px !important;
+  }
+
+  .dress-code__info-wrapper p:first-of-type {
+    margin-bottom: 1rem;
+  }
+  .dress-code__info-wrapper h4:nth-of-type(2) {
+    margin-bottom: 2rem;
+  }
+  .dress-code__info-wrapper h4,
+  .dress-code__info-wrapper p {
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+      1px 1px 0 black;
+  }
+
+  .dress-code__color-container {
+    gap: 5px;
+  }
+  .dress-code_color {
+    height: 50px;
+    width: 50px;
   }
 }
 
