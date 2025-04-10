@@ -278,11 +278,6 @@ input[type="button"]:hover {
   margin-top: 10px;
 }
 
-.hero__containerr {
-  width: 100vw;
-  height: 100vh;
-}
-
 /* Mobile navigation */
 .navigation__mobile-container {
   flex-direction: column;
@@ -540,7 +535,7 @@ input[type="button"]:hover {
 }
 
 /* Entourage */
-.entourage__containerP {
+.entourage__container {
   max-width: 100%;
 }
 .entourage__flex {
@@ -549,9 +544,18 @@ input[type="button"]:hover {
 .entourage__img {
   flex: 1;
 }
+.img-1 {
+  align-self: end;
+  align-content: end;
+  align-items: end;
+  justify-self: end;
+  text-align: right;
+}
 
 .entourage__img img {
-  width: 100%;
+  max-width: 100%;
+  height: 700px; /* or any fixed height */
+  object-fit: contain;
 }
 @keyframes pulse-border {
   0% {
@@ -755,6 +759,9 @@ input[type="button"]:hover {
   /* Entourage */
   .entourage__flex {
     flex-direction: column;
+  }
+  .entourage__img img {
+    max-height: 350px;
   }
 }
 
