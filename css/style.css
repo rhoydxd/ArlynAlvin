@@ -163,11 +163,11 @@ input[type="button"]:hover {
 }
 
 .navigation__flex.active {
-  background-color: rgba(185, 215, 234, 0.7) !important;
+  background-color: rgba(185, 215, 234, 0.9) !important;
 }
 
 .navigation__flex.background-active {
-  background-color: rgba(185, 215, 234, 0.7);
+  background-color: rgba(185, 215, 234, 0.9);
 }
 .navigation__flex.left-active {
   display: flex;
@@ -278,19 +278,21 @@ input[type="button"]:hover {
 
 /* Mobile navigation */
 .navigation__mobile-container {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 100px;
-  background-color: rgba(185, 215, 234, 0.7);
+  background-color: rgba(185, 215, 234, 0.9);
+  opacity: 0;
+  visibility: hidden;
   transform: translateY(-500%);
-  transition: transform 0.5s ease-in-out;
-  transition: display 0.5s ease-in-out;
+  transition: transform 0.1s ease-in-out, opacity 0.5s ease-in-out; /* 1s delay */
 }
 
 .navigation__mobile-container.active {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
   transform: translateY(0%);
 }
 
