@@ -15,9 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navigation__flex");
 
   const modal = document.querySelector("#videoModal");
-  const videoButton = document.querySelector(
-    ".video-preview__video-play-button"
-  );
+  const videoButton = document.querySelector(".video-preview__video-button");
   const closeButton = document.querySelector(".modal__close-button");
   const videoPlayer = document.getElementById("videoPlayer");
 

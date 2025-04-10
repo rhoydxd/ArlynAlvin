@@ -535,7 +535,11 @@ input[type="button"]:hover {
   .video-preview__video-wrapper {
     width: 90%;
   }
-
+  /* .video-preview__video-button,
+  .video-preview__video-play-button,
+  .video-preview__video-play-button span{
+    cursor: pointer;
+  } */
   .wedding-info__flex--1 h2,
   .wedding-info__flex--2 h2 {
     font-size: 40px;
@@ -564,6 +568,13 @@ input[type="button"]:hover {
   .wedding-info__flex--1,
   .wedding-info__flex--2 {
     width: 90%;
+  }
+  iframe {
+    width: 100%;
+  }
+
+  .video-preview__video-play-button {
+    z-index: 1000;
   }
 }
 
