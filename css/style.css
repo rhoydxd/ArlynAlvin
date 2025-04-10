@@ -256,6 +256,13 @@ input[type="button"]:hover {
   font-weight: 600;
 }
 
+.hero__info-container p:nth-of-type(3) {
+  font-size: 20px;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
 .hero__info-container {
   display: flex;
   flex-direction: column;
