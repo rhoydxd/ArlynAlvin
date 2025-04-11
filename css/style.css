@@ -542,7 +542,7 @@ input[type="button"]:hover {
 
 /* Entourage */
 .entourage__container h2 {
-  padding-top: 60px;
+  padding-top: 50px;
   text-align: center;
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
@@ -573,6 +573,66 @@ input[type="button"]:hover {
 .entourage__img img:hover {
   scale: 1.05;
 }
+
+/* Gift Guide */
+.gift-guide__container h2 {
+  padding-top: 100px;
+  text-align: center;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+  font-size: 40px;
+}
+
+.gift-guide__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gift-guide__gift-image {
+  width: 100px;
+}
+
+.gift-guide__gift-qr {
+  width: 350px;
+  height: 500px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.gift-guide__flex p {
+  text-align: center;
+  width: 1100px;
+  max-width: 90vw;
+}
+.gift-guide__gift-image img,
+.gift-guide__gift-qr img {
+  width: 100%;
+}
+.gift-guide__gift-qr img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 40px;
+}
+
+.gift-guide__gift-image img {
+  margin-top: 20px;
+}
+
+.gift-guide__flex p {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 25px;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
 @keyframes pulse-border {
   0% {
     transform: translateX(-50%) translateY(-50%) scale(1);
@@ -788,6 +848,10 @@ input[type="button"]:hover {
   .entourage__flex {
     flex-direction: column;
   }
+
+  .entourage__flex a {
+    text-align: center;
+  }
   .entourage__img img {
     max-height: 350px;
   }
@@ -797,6 +861,12 @@ input[type="button"]:hover {
 
   .entourage__container h2 {
     font-size: 30px;
+  }
+
+  /* Gift Guide */
+
+  .gift-guide__flex p {
+    font-size: 20px;
   }
 }
 
