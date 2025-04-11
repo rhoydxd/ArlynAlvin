@@ -597,7 +597,7 @@ input[type="button"]:hover {
 .gift-guide__gift-qr {
   width: 350px;
   height: 500px;
-  border-radius: 5px;
+  border-radius: 20px;
   position: relative;
 }
 
@@ -867,6 +867,12 @@ input[type="button"]:hover {
 
   .gift-guide__flex p {
     font-size: 20px;
+  }
+
+  .gift-guide__gift-qr {
+    margin-top: 10px;
+    width: 230px;
+    height: 328px;
   }
 }
 
