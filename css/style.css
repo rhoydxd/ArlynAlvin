@@ -659,19 +659,19 @@ input[type="button"]:hover {
 
   .home__body {
     background: none;
-    position: relative;
   }
 
   .home__body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     background: url("../resources/images/homebackgroundmobile.png") no-repeat
-      center center fixed;
+      center center;
     background-size: cover;
+    background-attachment: scroll;
     z-index: -1;
   }
 
