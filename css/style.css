@@ -37,6 +37,10 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  text-decoration: none;
+}
+
 li {
   list-style: none;
 }
@@ -45,6 +49,14 @@ li {
   width: 90%; /* Flexible width for small screens */
   max-width: 90%;
   margin: 0 auto;
+}
+
+.fa-brands {
+  cursor: pointer;
+}
+
+.fa-brands:hover {
+  color: rgba(28, 94, 192, 0.5);
 }
 
 /* INDEX.HTML */
@@ -153,11 +165,53 @@ input[type="button"]:hover {
 
 .navigation__desktop-menu-items li {
   padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.navigation__desktop-menu-items li:nth-of-type(7) {
+  background-color: #2c3a74;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.navigation__desktop-menu-items li:nth-of-type(7) a {
+  color: white;
+  cursor: pointer;
+}
+
+/* .navigation__desktop-menu-items li:nth-of-type(7) a:hover {
+  color: rgb(5, 28, 44);
+  background-color: rgba(0, 0, 0, 0);
+} */
+
+.navigation__desktop-menu-items li:nth-of-type(7):hover {
+  color: rgb(5, 28, 44);
+  background-color: rgba(28, 94, 192, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .navigation__desktop-menu-items a {
   font-size: 18px;
   color: rgb(5, 28, 44);
+}
+.navigation__desktop-menu-items a:hover {
+  color: rgba(28, 94, 192, 0.5);
+}
+
+.navigation__mobile-social-items i,
+.navigation__desktop-social-items i {
+  position: relative;
+}
+.navigation__mobile-social-items a,
+.navigation__desktop-social-items a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .navigation__flex {
@@ -295,7 +349,7 @@ input[type="button"]:hover {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-500%);
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* 1s delay */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   display: none;
 }
 
@@ -316,6 +370,45 @@ input[type="button"]:hover {
 .navigation__mobile-menu-items a {
   color: rgb(5, 28, 44);
   font-size: 18px;
+}
+
+.navigation__mobile-menu-items li {
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.navigation__mobile-menu-items li:nth-of-type(7) {
+  background-color: #2c3a74;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.navigation__mobile-menu-items li:nth-of-type(7) a {
+  color: white;
+  cursor: pointer;
+}
+
+/* .navigation__desktop-menu-items li:nth-of-type(7) a:hover {
+  color: rgb(5, 28, 44);
+  background-color: rgba(0, 0, 0, 0);
+} */
+
+.navigation__mobile-menu-items li:nth-of-type(7):hover {
+  color: rgb(5, 28, 44);
+  background-color: rgba(28, 94, 192, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.navigation__mobile-menu-items a {
+  font-size: 18px;
+  color: rgb(5, 28, 44);
+}
+.navigation__mobile-menu-items a:hover {
+  color: rgba(28, 94, 192, 0.5);
 }
 
 /* Wedding and Reception venue */
@@ -359,6 +452,14 @@ input[type="button"]:hover {
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
+  line-height: normal;
+}
+
+.wedding-info__flex--1 p:nth-of-type(2),
+.wedding-info__flex--2 p:nth-of-type(2) {
+  font-style: italic;
+  font-weight: 350;
+  font-size: 20px;
 }
 
 /* Video Preview */
@@ -542,7 +643,7 @@ input[type="button"]:hover {
 
 /* Entourage */
 .entourage__container h2 {
-  padding-top: 50px;
+  padding-top: 75px;
   text-align: center;
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
@@ -575,6 +676,9 @@ input[type="button"]:hover {
 }
 
 /* Gift Guide */
+.gift-guide__container {
+  margin-bottom: 100px;
+}
 .gift-guide__container h2 {
   padding-top: 100px;
   text-align: center;
@@ -717,6 +821,7 @@ input[type="button"]:hover {
     width: 60px !important;
   }
 
+  /* HERO */
   .home__body {
     background: none;
   }
@@ -775,6 +880,13 @@ input[type="button"]:hover {
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
       1px 1px 0 black;
+  }
+
+  .wedding-info__flex--1 p:nth-of-type(2),
+  .wedding-info__flex--2 p:nth-of-type(2) {
+    font-style: italic;
+    font-weight: 350;
+    font-size: 1rem;
   }
 
   .wedding-info__flex--1 {

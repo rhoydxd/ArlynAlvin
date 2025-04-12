@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
     ".navigation__mobile-container"
   );
   const navbar = document.querySelector(".navigation__flex");
+  const mobileMenuButtons = document.querySelectorAll(
+    ".navigation__mobile-menu-buttons"
+  );
 
   const modal = document.querySelector("#videoModal");
   const videoButton = document.querySelector(".video-preview__video-button");
@@ -61,6 +64,13 @@ document.addEventListener("DOMContentLoaded", function () {
   mobileToggle.addEventListener("click", function () {
     mobileNavContainer.classList.toggle("active");
     navbar.classList.toggle("active");
+  });
+
+  mobileMenuButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      mobileNavContainer.classList.remove("active");
+      navbar.classList.remove("active");
+    });
   });
 });
 
