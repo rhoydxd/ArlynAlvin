@@ -261,10 +261,12 @@
       <section class="rsvp" id="rsvp">
         <div class="rsvp__container">
           <div class="rsvp__card">
-            <p class="rsvp__close-button">&times;</p>
+            <form name="guest" netlify>
+            <p name="firstname" class="rsvp__close-button">&times;</p>
             <p>Hi <span id="firstName">{Name}</span>!</p>
             <p>We have reserved seat/s for you. The favor of your reply is requested on or before May 5, 2025. Please confirm your attendance. Click the button below.</p>
-            <button>Confirm Invite</button>
+              <button type="submit">Confirm Invite</button>
+            </form>
           </div>
         </div>
     </main>
