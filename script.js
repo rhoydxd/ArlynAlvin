@@ -22,6 +22,73 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeButton = document.querySelector(".modal__close-button");
   const videoPlayer = document.getElementById("videoPlayer");
 
+  // Storing Name
+  // const openInviteButton = document.querySelector("#openInvitation");
+
+  // openInviteButton.addEventListener("click", function () {
+  //   const firstName = document.getElementById("name").value;
+  //   alert(firstName);
+  // });
+
+  const openInviteButton = document.getElementById("openInvitation");
+  if (openInviteButton) {
+    openInviteButton.addEventListener("click", function () {
+      const name = document.getElementById("name").value.trim();
+      if (name) {
+        sessionStorage.setItem("guestFirstName", name);
+        window.location.href = "home.html";
+      } else {
+        alert("Please enter your name.");
+      }
+    });
+  }
+
+  const firstName = document.getElementById("firstName");
+  if (firstName) {
+    const guestFirstName = sessionStorage.getItem("guestFirstName");
+    if (guestFirstName) {
+      firstName.textContent = guestFirstName;
+    }
+  }
+
+  // RSVP Pop-out
+  const rsvp = document.querySelector(".rsvp");
+  const rsvpButton = document.querySelector(".rsvp-button");
+  const rsvpClose = document.querySelector(".rsvp__close-button");
+  const rsvpMobileButton = document.querySelector(".rsvp-mobile-button");
+
+  rsvpButton.addEventListener("click", function () {
+    openRSVP();
+  });
+
+  openRSVP = function () {
+    rsvp.classList.add("active");
+    header.classList.remove("left-active");
+    headerLogo.classList.remove("left-active");
+    headerMenu.classList.remove("left-active");
+    headerMenuItems.classList.remove("left-active");
+    headerMenuSocialItems.classList.remove("left-active");
+    header.classList.add("background-active");
+  };
+
+  rsvpMobileButton.addEventListener("click", function () {
+    rsvp.classList.add("active");
+  });
+
+  rsvpClose.addEventListener("click", function () {
+    closeRSVP();
+  });
+
+  closeRSVP = function () {
+    rsvp.classList.remove("active");
+    header.classList.remove("left-active");
+    headerLogo.classList.remove("left-active");
+    headerMenu.classList.remove("left-active");
+    headerMenuItems.classList.remove("left-active");
+    headerMenuSocialItems.classList.remove("left-active");
+    header.classList.add("background-active");
+  };
+
   // VIDEO MODAL
   videoButton.addEventListener("click", function () {
     modal.style.display = "block";
@@ -42,6 +109,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // NAVIGATION LEFT TO TOP FEATURE
   function toggleNavbarLeftTop() {
+    // Check if RSVP is active
+    const isRSVPActive = rsvp.classList.contains("active");
+
+    // If RSVP is active, do not apply scroll changes
+    if (isRSVPActive) {
+      return;
+    }
     if (window.scrollY > 0) {
       header.classList.remove("left-active");
       headerLogo.classList.remove("left-active");
@@ -61,6 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", toggleNavbarLeftTop);
 
   //MOBILE NAV TOGGLE
+
+  const notRSVPMobilebutton = document.querySelectorAll(".ex-rsvp");
+
   mobileToggle.addEventListener("click", function () {
     mobileNavContainer.classList.toggle("active");
     navbar.classList.toggle("active");
@@ -70,6 +147,12 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function () {
       mobileNavContainer.classList.remove("active");
       navbar.classList.remove("active");
+    });
+  });
+
+  notRSVPMobilebutton.forEach((button1) => {
+    button1.addEventListener("click", function () {
+      rsvp.classList.remove("active");
     });
   });
 });

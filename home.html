@@ -40,13 +40,13 @@
         </div>
         <div class="navigation__desktop-menu left-active">
           <ul class="navigation__desktop-menu-items left-active">
-            <li><a href="#thewedding">The Wedding</a></li>
-            <li><a href="">Gallery</a></li>
-            <li><a href="#entourage">Entourage</a></li>
-            <li><a href="#">Venue</a></li>
-            <li><a href="#dress-code">Dress Code</a></li>
-            <li><a href="#gift-guide">Gifts</a></li>
-            <li><a href="#rsvp">RSVP</a></li>
+            <li><a class="ex-rsvp" href="#thewedding">The Wedding</a></li>
+            <li><a class="ex-rsvp" href="">Gallery</a></li>
+            <li><a class="ex-rsvp" href="#entourage">Entourage</a></li>
+            <li><a class="ex-rsvp" href="#">Venue</a></li>
+            <li><a class="ex-rsvp" href="#dress-code">Dress Code</a></li>
+            <li><a class="ex-rsvp" href="#gift-guide">Gifts</a></li>
+            <li class="rsvp-button"><a href="#rsvp" class="rsvp-button">RSVP</a></li>
           </ul>
           <div class="navigation__desktop-social-items left-active">
             <i class="fa-brands fa-facebook"
@@ -76,31 +76,33 @@
       <div class="navigation__mobile-container">
         <ul class="navigation__mobile-menu-items">
           <li>
-            <a class="navigation__mobile-menu-buttons" href="./home.html"
+            <a class="navigation__mobile-menu-buttons ex-rsvp" href="./home.html"
               >The Wedding</a
             >
           </li>
           <li>
-            <a class="navigation__mobile-menu-buttons" href="#">Gallery</a>
+            <a class="navigation__mobile-menu-buttons ex-rsvp" href="#">Gallery</a>
           </li>
           <li>
-            <a class="navigation__mobile-menu-buttons" href="#entourage"
+            <a class="navigation__mobile-menu-buttons ex-rsvp" href="#entourage"
               >Entourage</a
             >
           </li>
           <li>
-            <a class="navigation__mobile-menu-buttons" href="#">Venue</a>
+            <a class="navigation__mobile-menu-buttons ex-rsvp" href="#">Venue</a>
           </li>
           <li>
-            <a class="navigation__mobile-menu-buttons" href="#">Dress Code</a>
-          </li>
-          <li>
-            <a class="navigation__mobile-menu-buttons" href="#gift-guide"
-              >Gifts</a
+            <a class="navigation__mobile-menu-buttons ex-rsvp" href="#dress-code"
+              >Dress Code</a
             >
           </li>
           <li>
-            <a class="navigation__mobile-menu-buttons" href="#rsvp">RSVP</a>
+            <a class="navigation__mobile-menu-buttons ex-rsvp" href="#gift-guide"
+              >Gifts</a
+            >
+          </li>
+          <li class="navigation__mobile-menu-buttons rsvp-mobile-button">
+            <a class="navigation__mobile-menu-buttons rsvp-mobile-button" href="#rsvp">RSVP</a>
           </li>
         </ul>
         <div class="navigation__mobile-social-items">
@@ -254,6 +256,17 @@
           </div>
         </div>
       </section>
+
+
+      <section class="rsvp" id="rsvp">
+        <div class="rsvp__container">
+          <div class="rsvp__card">
+            <p class="rsvp__close-button">&times;</p>
+            <p>Hi <span id="firstName">{Name}</span>!</p>
+            <p>We have reserved seat/s for you. The favor of your reply is requested on or before May 5, 2025. Please confirm your attendance. Click the button below.</p>
+            <button>Confirm Invite</button>
+          </div>
+        </div>
     </main>
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
