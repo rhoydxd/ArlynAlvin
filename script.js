@@ -44,10 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const firstName = document.getElementById("firstName");
+  const guest = document.getElementById("guest");
   if (firstName) {
     const guestFirstName = sessionStorage.getItem("guestFirstName");
     if (guestFirstName) {
       firstName.textContent = guestFirstName;
+      guest.textContent = guestFirstName;
+      guest.value = guestFirstName;
     }
   }
 
