@@ -158,6 +158,22 @@ document.addEventListener("DOMContentLoaded", function () {
       rsvp.classList.remove("active");
     });
   });
+
+  let timeout;
+
+  function startInactivityTimer() {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      window.location.href = "index.html";
+    }, 120000); // 2 minutes
+  }
+
+  // Listen for activity
+  ["click", "mousemove", "keydown", "touchstart"].forEach((event) => {
+    document.addEventListener(event, startInactivityTimer);
+  });
+
+  startInactivityTimer();
 });
 
 window.onload = function () {

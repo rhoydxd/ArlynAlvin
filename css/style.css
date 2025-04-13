@@ -1071,7 +1071,9 @@ input[type="button"]:hover {
     width: 230px;
     height: 328px;
   }
-
+  .gift-guide h2 {
+    font-size: 30px;
+  }
   /* RSVP */
   .rsvp {
     background: url("../resources/images/homebackgroundmobile.png") no-repeat
