@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sessionStorage.setItem("guestFirstName", name);
         window.location.href = "home.html";
       } else {
-        alert("Please enter your name.");
+        alert("Please enter your full name.");
       }
     });
   }
