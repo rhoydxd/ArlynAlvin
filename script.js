@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   openRSVP = function () {
     rsvp.classList.add("active");
+    venue.classList.remove("active");
     header.classList.remove("left-active");
     headerLogo.classList.remove("left-active");
     headerMenu.classList.remove("left-active");
@@ -92,6 +93,26 @@ document.addEventListener("DOMContentLoaded", function () {
     header.classList.add("background-active");
   };
 
+  // VENUE Pop-out
+  const venue = document.querySelector(".venue");
+  const venueButton = document.querySelector(".venue-button");
+  const venueMobileButton = document.querySelector(".venue-mobile-button");
+
+  venueButton.addEventListener("click", function () {
+    venue.classList.add("active");
+    rsvp.classList.remove("active");
+    header.classList.remove("left-active");
+    headerLogo.classList.remove("left-active");
+    headerMenu.classList.remove("left-active");
+    headerMenuItems.classList.remove("left-active");
+    headerMenuSocialItems.classList.remove("left-active");
+    header.classList.add("background-active");
+  });
+
+  venueMobileButton.addEventListener("click", function () {
+    venue.classList.add("active");
+  });
+
   // VIDEO MODAL
   videoButton.addEventListener("click", function () {
     modal.style.display = "block";
@@ -114,9 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleNavbarLeftTop() {
     // Check if RSVP is active
     const isRSVPActive = rsvp.classList.contains("active");
-
+    const isVenueActive = venue.classList.contains("active");
     // If RSVP is active, do not apply scroll changes
-    if (isRSVPActive) {
+    if (isRSVPActive || isVenueActive) {
       return;
     }
     if (window.scrollY > 0) {

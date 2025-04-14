@@ -822,6 +822,140 @@ input[type="button"]:hover {
   position: absolute;
   left: -9999px;
 }
+
+/* VENUE */
+.venue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("../resources/images/homebackground.jpg") no-repeat center
+    center;
+  background-size: cover;
+  background-attachment: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.venue.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.venue::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.venue__card {
+  padding-top: 3px;
+  max-width: 1100px;
+  position: relative;
+  background-color: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding-left: 3px;
+}
+
+.value__inner-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  background-color: white;
+  z-index: 1;
+  position: absolute;
+}
+
+.value__inner-circle1 {
+  top: 330px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  background-color: white;
+  z-index: 1;
+  position: absolute;
+}
+
+.value__inner-circle2 {
+  bottom: 0px;
+  width: 10px;
+  height: 20px;
+  background-color: white;
+  z-index: 1;
+  position: absolute;
+}
+
+.value__information-1 {
+  display: flex;
+  align-items: center;
+  margin-left: 3px;
+  border-left: 4px solid black;
+  padding-bottom: 30px;
+}
+
+.value__information-2 {
+  display: flex;
+  align-items: center;
+  margin-left: 3px;
+  border-left: 4px solid black;
+}
+
+.value__info-container {
+  padding-left: 20px;
+  /* flex: 1; */
+}
+/* .value__map-container{
+  flex: 1;
+} */
+.value__map-container {
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+.value__map-container-1 {
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.value__map-container iframe,
+.value__map-container-1 iframe {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.venue__card-1 {
+  padding-top: 3px;
+  max-width: 1100px;
+  position: relative;
+  background-color: white;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding-left: 3px;
+}
 @keyframes pulse-border {
   0% {
     transform: translateX(-50%) translateY(-50%) scale(1);
@@ -990,7 +1124,7 @@ input[type="button"]:hover {
   .wedding-info__flex--2 {
     width: 90%;
   }
-  iframe {
+  .modal__content iframe {
     width: 100%;
   }
 
@@ -1083,6 +1217,16 @@ input[type="button"]:hover {
     position: fixed;
     top: 0;
     left: 0;
+  }
+
+  /* Venue */
+  .venue__card {
+    max-width: 95vw !important;
+    width: 95vw !important ;
+  }
+  .venue__card-1 {
+    max-width: 95vw !important;
+    width: 95vw !important;
   }
 }
 
