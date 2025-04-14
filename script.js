@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const venue = document.querySelector(".venue");
   const venueButton = document.querySelector(".venue-button");
   const venueMobileButton = document.querySelector(".venue-mobile-button");
+  const venueClose = document.querySelector(".venue__close-button");
 
   venueButton.addEventListener("click", function () {
     venue.classList.add("active");
@@ -111,6 +112,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   venueMobileButton.addEventListener("click", function () {
     venue.classList.add("active");
+  });
+
+  venueClose.addEventListener("click", function () {
+    venue.classList.remove("active");
+    header.classList.remove("left-active");
+    headerLogo.classList.remove("left-active");
+    headerMenu.classList.remove("left-active");
+    headerMenuItems.classList.remove("left-active");
+    headerMenuSocialItems.classList.remove("left-active");
+    header.classList.add("background-active");
   });
 
   // VIDEO MODAL
