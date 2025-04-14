@@ -54,6 +54,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Gallery Modal
+  const galleryButton = document.querySelector(".gallery-button");
+  const galleryMobileButton = document.querySelector(".gallery-mobile-button");
+  const main = document.querySelector(".main");
+  const gallery = document.querySelector(".gallery");
+
+  galleryButton.addEventListener("click", function () {
+    main.classList.add("active");
+    gallery.classList.add("active");
+  });
+
+  galleryMobileButton.addEventListener("click", function () {
+    main.classList.add("active");
+    gallery.classList.add("active");
+  });
+
   // RSVP Pop-out
   const rsvp = document.querySelector(".rsvp");
   const rsvpButton = document.querySelector(".rsvp-button");
