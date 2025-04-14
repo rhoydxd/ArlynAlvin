@@ -161,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //MOBILE NAV TOGGLE
 
   const notRSVPMobilebutton = document.querySelectorAll(".ex-rsvp");
+  const notVenueMobilebutton = document.querySelectorAll(".ex-venue");
 
   mobileToggle.addEventListener("click", function () {
     mobileNavContainer.classList.toggle("active");
@@ -177,6 +178,12 @@ document.addEventListener("DOMContentLoaded", function () {
   notRSVPMobilebutton.forEach((button1) => {
     button1.addEventListener("click", function () {
       rsvp.classList.remove("active");
+    });
+  });
+
+  notVenueMobilebutton.forEach((button2) => {
+    button2.addEventListener("click", function () {
+      venue.classList.remove("active");
     });
   });
 
