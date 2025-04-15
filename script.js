@@ -59,15 +59,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const galleryMobileButton = document.querySelector(".gallery-mobile-button");
   const main = document.querySelector(".main");
   const gallery = document.querySelector(".gallery");
+  const galleryClose = document.querySelector(".gallery__close-button");
 
   galleryButton.addEventListener("click", function () {
-    main.classList.add("active");
     gallery.classList.add("active");
+    main.classList.add("deactivated");
+    venue.classList.remove("active");
+    rsvp.classList.remove("active");
+    header.classList.remove("left-active");
+    headerLogo.classList.remove("left-active");
+    headerMenu.classList.remove("left-active");
+    headerMenuItems.classList.remove("left-active");
+    headerMenuSocialItems.classList.remove("left-active");
+    header.classList.add("background-active");
   });
 
   galleryMobileButton.addEventListener("click", function () {
-    main.classList.add("active");
+    main.classList.add("deactivated");
     gallery.classList.add("active");
+  });
+
+  galleryClose.addEventListener("click", function () {
+    main.classList.remove("deactivated");
+    gallery.classList.remove("active");
+    header.classList.remove("left-active");
+    headerLogo.classList.remove("left-active");
+    headerMenu.classList.remove("left-active");
+    headerMenuItems.classList.remove("left-active");
+    headerMenuSocialItems.classList.remove("left-active");
+    header.classList.add("background-active");
   });
 
   // RSVP Pop-out
@@ -81,7 +101,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   openRSVP = function () {
+    main.classList.remove("deactivated");
     rsvp.classList.add("active");
+    gallery.classList.remove("active");
     venue.classList.remove("active");
     header.classList.remove("left-active");
     headerLogo.classList.remove("left-active");
@@ -116,7 +138,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const venueClose = document.querySelector(".venue__close-button");
 
   venueButton.addEventListener("click", function () {
+    main.classList.remove("deactivated");
     venue.classList.add("active");
+    gallery.classList.remove("active");
     rsvp.classList.remove("active");
     header.classList.remove("left-active");
     headerLogo.classList.remove("left-active");
@@ -163,8 +187,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Check if RSVP is active
     const isRSVPActive = rsvp.classList.contains("active");
     const isVenueActive = venue.classList.contains("active");
+    const isGalleryActive = gallery.classList.contains("active");
     // If RSVP is active, do not apply scroll changes
-    if (isRSVPActive || isVenueActive) {
+    if (isRSVPActive || isVenueActive || isGalleryActive) {
       return;
     }
     if (window.scrollY > 0) {
@@ -189,6 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const notRSVPMobilebutton = document.querySelectorAll(".ex-rsvp");
   const notVenueMobilebutton = document.querySelectorAll(".ex-venue");
+  const notGalleryMobilebutton = document.querySelectorAll(".ex-gallery");
 
   mobileToggle.addEventListener("click", function () {
     mobileNavContainer.classList.toggle("active");
@@ -211,6 +237,13 @@ document.addEventListener("DOMContentLoaded", function () {
   notVenueMobilebutton.forEach((button2) => {
     button2.addEventListener("click", function () {
       venue.classList.remove("active");
+    });
+  });
+
+  notGalleryMobilebutton.forEach((button3) => {
+    button3.addEventListener("click", function () {
+      gallery.classList.remove("active");
+      main.classList.remove("deactivated");
     });
   });
 

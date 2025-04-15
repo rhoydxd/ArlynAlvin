@@ -987,8 +987,8 @@ input[type="button"]:hover {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100%;
-  /* height: 0px; */
+  /* height: 100%; */
+  height: 0px;
   overflow: hidden;
   background: url("../resources/images/homebackground.jpg") no-repeat center
     center;
@@ -996,11 +996,11 @@ input[type="button"]:hover {
   background-attachment: scroll;
   z-index: 1000;
   opacity: 1;
-  /* transform: scale(0.6); */
+  transform: scale(0.6);
   pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: all 0.4s ease;
   position: relative;
-  /* left: -2000px; */
+  left: -2000px;
 }
 
 .gallery::before {
@@ -1014,15 +1014,15 @@ input[type="button"]:hover {
 }
 
 .gallery.active {
+  left: 0;
   height: 100%;
   overflow: auto;
-  opacity: 1;
-  left: 0;
-  transform: scale(1);
   pointer-events: auto;
+  opacity: 1;
+  transform: scale(1);
 }
 
-.main.active {
+.main.deactivated {
   display: none;
 }
 
@@ -1046,6 +1046,66 @@ input[type="button"]:hover {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.gallery__image-container {
+  contain: content;
+}
+
+.gallery__close-button {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.gallery__close-div {
+  display: flex;
+  justify-content: end;
+}
+.gallery__close-button {
+  text-align: end;
+  font-size: 50px;
+  max-height: 70px;
+  font-weight: 300;
+  cursor: pointer;
+  z-index: 200;
+  color: white;
+  transition: transform 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+
+.gallery__close-button:hover {
+  color: #ff6b6b; /* soft red/pink for clear interaction */
+}
+
+.image-container-1 {
+  grid-column: span 2;
+}
+
+.image-container-3 {
+  grid-row: span 2;
+}
+
+.image-container-5 {
+  grid-row: span 2;
+}
+
+.image-container-8 {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.image-container-10 {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.image-container-11 {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+
+.image-container-18 {
+  grid-column: span 3;
 }
 
 @keyframes pulse-border {
@@ -1355,6 +1415,11 @@ input[type="button"]:hover {
   .value__info-container p {
     font-size: 14px !important;
     line-height: 1;
+  }
+
+  /* Gallery */
+  .gallery__container {
+    max-width: 90vw;
   }
 }
 
