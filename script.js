@@ -262,6 +262,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   startInactivityTimer();
+
+  const colors = document.querySelectorAll(".dress-code_color");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+        } else {
+          entry.target.classList.remove("animate"); // Reset when out of view
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  colors.forEach((color) => observer.observe(color));
 });
 
 window.onload = function () {
