@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
       window.location.href = "index.html";
-    }, 600000); // 10 minutes
+    }, 400000); // 10 minutes
   }
 
   // Listen for activity
